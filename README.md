@@ -28,3 +28,6 @@ Next a Python Flask wrapper needs to be written round the buzz generator to make
 
 ### 7) Containerise the web application using Docker
 Next the Dockerfile was created which uses the Alpine base image, installs Python and pip, and the web app. It also runs the web app whenever the container is launched with the last line.
+
+### 8) Deploy to Docker Hub
+This makes it easier to share containers between environments or go back to a previous version. Created a deploy_dockerhub.sh script in a new .travis directory (.travis.yml stays in project root). This script logs in to docker with the environment variables set manually in travis CI. after the login, the docker image is built and deployed to Dockerhub, where it can be accessed directly.
