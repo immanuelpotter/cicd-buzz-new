@@ -9,11 +9,10 @@ signal.signal(signal.SIGINT, lambda s, f: os._exit(0))
 
 @app.route("/")
 def generate_buzz():
-	page = '<!DOCTYPE html>'
-	page += "<link rel='stylesheet' type = 'text/css' href='static/style.css'>"
-	page += '<html><body><h1>'
+	page = '<html><head>DevOps Buzz Generator</head>'
+	page += '<style>body{background-color: #ef16d2}</style><body><h1>'
 	page += generator.generate_buzz()
-	page += '</h1></body></h1>'
+	page += '</h1></body></html>'
 	return page
 
 if __name__ == "__main__":
