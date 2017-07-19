@@ -19,10 +19,12 @@ def test_generate_buzz_of_at_least_five_words():
 	phrase = generator.generate_buzz()
 	assert len(phrase.split()) >= 5
 
-def test_words_entered_correctly():
-	assert generator.adverbs[0] == 'remarkably'
-	assert generator.adverbs[3] == 'significantly'
-	assert generator.verbs[1] == 'improves'
-	assert generator.verbs[4] == 'boosts'
-	assert generator.buzz[2] == 'continuous deployment'
-	assert generator.buzz[4] == 'continuous improvement'
+def test_sample_two_words():
+	l = ('foodiddly', 'bardiddly', 'foobariddly')
+	result = generator.sample(l, n=1)
+	buzz_terms = sample(result,2)
+	assert result[0] in l
+	assert result[1] in l
+	assert result[2] in l
+	assert 'foo' not in l
+	assert buzz_terms == ('foodiddly', 'bardiddly', 'foobariddly')
