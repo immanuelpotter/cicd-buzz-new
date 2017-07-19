@@ -25,3 +25,6 @@ Sign in with github and press "play" on your repo to check quality of code.
 
 ### 6) Turn buzz generator into simple web app
 Next a Python Flask wrapper needs to be written round the buzz generator to make the program respond to HTTP requests, and output HTML. found in app.py
+
+### 7) Containerise the web application using Docker
+Next the Dockerfile was created which uses the Alpine base image, installs Python and pip, and the web app. It also runs the web app whenever the container is launched with the last line.
