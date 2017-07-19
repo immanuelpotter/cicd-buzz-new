@@ -33,3 +33,6 @@ Next the Dockerfile was created which uses the Alpine base image, installs Pytho
 
 ### 8) Deploy to Docker Hub
 This makes it easier to share containers between environments or go back to a previous version. Created a deploy_dockerhub.sh script in a new .travis directory (.travis.yml stays in project root). This script logs in to docker with the environment variables set manually in travis CI. after the login, the docker image is built and deployed to Dockerhub, where it can be accessed directly.
+
+### 9) Deploy to Heroku
+Which is a cloud platform for hosting small and scalable web apps. The script added in this step well take the image from Dockerhub and actually deploy it in a live environment.
