@@ -19,12 +19,6 @@ def test_generate_buzz_of_at_least_five_words():
 	phrase = generator.generate_buzz()
 	assert len(phrase.split()) >= 5
 
-def test_sample_two_words():
-	l = ('foodiddly', 'bardiddly', 'foobariddly')
-	result = generator.sample(l, n=1)
-	buzz_terms = generator.sample(result,2)
-	assert result[0] in l
-	assert result[1] in l
-	assert result[2] in l
-	assert 'foo' not in l
-	assert buzz_terms == ('foodiddly', 'bardiddly', 'foobariddly')
+def test_generate_buzz_isnt_over_ten_words():
+	phrase = generator.generate_buzz()
+	assert len(phrase.split()) <= 10
