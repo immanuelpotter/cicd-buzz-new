@@ -22,7 +22,7 @@ def test_generate_buzz_of_at_least_five_words():
 def test_sample_two_words():
 	l = ('foodiddly', 'bardiddly', 'foobariddly')
 	result = generator.sample(l, n=1)
-	buzz_terms = sample(result,2)
+	buzz_terms = generator.sample(result,2)
 	assert result[0] in l
 	assert result[1] in l
 	assert result[2] in l
