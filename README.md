@@ -1,5 +1,7 @@
 # cicd-buzz-new
 
+taken from medium.com/bettercode/how-to-build-a-modern-ci-cd-pipeline-5faa01891a5b by Rob van der Leek
+
 ## Pipeline for simple python app
 
 ### 1) Python application
