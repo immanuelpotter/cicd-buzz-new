@@ -20,6 +20,9 @@ def test_generate_buzz_of_at_least_five_words():
 	assert len(phrase.split()) >= 5
 
 def test_words_entered_correctly():
+	adverbs = generator.adverbs
+	verbs = generator.verbs
+	buzz = generator.buzz
 	assert adverbs[0] == 'remarkably'
 	assert adverbs[3] == 'significantly'
 	assert verbs[1] == 'improves'
